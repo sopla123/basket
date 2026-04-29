@@ -134,8 +134,8 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "https://forms.gle/bfREMHETTa1EjuGX7\n\n"
         "После заполнения просто закрой форму и продолжай пользоваться ботом.\n\n"
         "Спасибо за обратную связь! 🙌",
-        parse_mode="Markdown",
-        reply_markup=back_to_main()
+            parse_mode="Markdown",
+            reply_markup=back_to_main()
     )
 
 # --- Запуск бота ---
