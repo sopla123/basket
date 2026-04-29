@@ -85,8 +85,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "📹 *Правила игры для новичков*\n"
             "https://yandex.ru/video/preview/3754385915304373025\n\n"
             "Жесты\n"
-            "https://dumpster.cdn.sports.ru/d/98/ffcd9074e8686ea6510da384bd0cf?f=webp&q=90&s=2x&w=730\n"
-            "https://dumpster.cdn.sports.ru/3/1f/43c28c02b328b1daefe6861931ca4?f=webp&q=90&s=2x&w=730\n"
+            "https://www.sports.ru/basketball/blogs/3229565.html\n"
             "📹 *Передача мяча (пас)*\n"
             "https://rutube.ru/video/76d242c180e3d4c430c78da74bf14cdf\n\n"
             "💡 *Совет:* смотри видео и сразу пробуй на площадке!",
