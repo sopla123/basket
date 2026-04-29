@@ -28,7 +28,7 @@ logging.basicConfig(
 # --- Клавиатуры ---
 def main_menu():
     keyboard = [
-        [InlineKeyboardButton("📚 Теория", callback_data="theory")],
+        [InlineKeyboardButton("📚 История", callback_data="history")],
         [InlineKeyboardButton("🎥 Видеоуроки", callback_data="video")],
         [InlineKeyboardButton("📖 Термины", callback_data="terms")],
         [InlineKeyboardButton("ℹ️ О проекте", callback_data="about")]
@@ -66,20 +66,10 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
     
     # Теория (правила и история)
-    elif data == "theory":
+    elif data == "history":
         await query.edit_message_text(
-            "📚 *ОСНОВНЫЕ ПРАВИЛА БАСКЕТБОЛА*\n\n"
-            "• *24 секунды* — лимит времени на атаку\n"
-            "• *8 секунд* — нужно вывести мяч из тыловой зоны\n"
-            "• *3 секунды* — нельзя находиться в краске соперника дольше 3 секунд\n"
-            "• *5 фолов* — игрок покидает площадку\n"
-            "• *Пробежка* — более 2 шагов с мячом без ведения\n\n"
-            "🏆 *ИСТОРИЯ*\n"
-            "Игру придумал Джеймс Нейсмит в 1891 году в США.\n"
-            "В Россию баскетбол пришёл в 1901 году.\n"
-            "С 1936 года — олимпийский вид спорта.\n\n"
-            "⭐ *ЗОЛОТОЕ ПРАВИЛО:*\n"
-            "Тренируй дриблинг и бросок каждый день!",
+            "📚 *ИСТОРИЯ БАСКЕТБОЛА*\n\n"
+            "• Зимой 1891 года перед Нейсмитом встала задача: придумать подвижную игру для студентов, которую можно было бы проводить в закрытом помещении. Он вспомнил детскую игру «утка на скале», суть которой заключалась в попадании мячом в камень. Нейсмит прикрепил две корзины из-под персиков к перилам балкона на высоте 3 метров 5 сантиметров (эта высота сохранилась до сих пор) и разделил группу из 18 студентов на две команды. Целью игры было забросить мяч в корзину соперника.\n",
             parse_mode="Markdown",
             reply_markup=back_button()
         )
@@ -94,6 +84,8 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "https://rutube.ru/video/cf61d0ce4188f61c36bc6f1368311518\n\n"
             "📹 *Правила игры для новичков*\n"
             "https://www.youtube.com/watch?v=NeL7G0bXx3M\n\n"
+            "📹 *Передача мяча (пас)*\n"
+            "https://rutube.ru/video/76d242c180e3d4c430c78da74bf14cdf\n\n"
             "💡 *Совет:* смотри видео и сразу пробуй на площадке!",
             parse_mode="Markdown",
             reply_markup=back_button()
@@ -121,9 +113,6 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.edit_message_text(
             "ℹ️ *О ПРОЕКТЕ*\n\n"
             "Этот чат-бот создан в рамках индивидуального проекта\n"
-            "учеником 10 класса Билык Павлом.\n\n"
-            "📌 *Цель:* помощь начинающим спортсменам в изучении баскетбола.\n\n"
-            "📅 Серпухов, 2025\n\n"
             "🏀 *Занимайся спортом и развивайся!*",
             parse_mode="Markdown",
             reply_markup=back_button()
