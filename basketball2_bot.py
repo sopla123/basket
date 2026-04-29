@@ -31,6 +31,7 @@ def main_menu():
         [InlineKeyboardButton("📚 История", callback_data="history")],
         [InlineKeyboardButton("🎥 Видеоуроки", callback_data="video")],
         [InlineKeyboardButton("📖 Термины", callback_data="terms")],
+        [InlineKeyboardButton("📝 Оценить бота", callback_data="feedback")],
         [InlineKeyboardButton("ℹ️ О проекте", callback_data="about")]
     ]
     return InlineKeyboardMarkup(keyboard)
@@ -84,7 +85,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "https://rutube.ru/video/cf61d0ce4188f61c36bc6f1368311518\n\n"
             "📹 *Правила игры для новичков*\n"
             "https://yandex.ru/video/preview/3754385915304373025\n\n"
-            "Жесты\n"
+            "*Жесты*\n"
             "https://www.sports.ru/basketball/blogs/3229565.html\n"
             "📹 *Передача мяча (пас)*\n"
             "https://rutube.ru/video/76d242c180e3d4c430c78da74bf14cdf\n\n"
@@ -120,10 +121,22 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.edit_message_text(
             "ℹ️ *О ПРОЕКТЕ*\n\n"
             "Этот чат-бот создан в рамках индивидуального проекта\n"
+            ""
             "🏀 *Занимайся спортом и развивайся!*",
             parse_mode="Markdown",
             reply_markup=back_button()
         )
+    elif data == "feedback":
+    await query.edit_message_text(
+        "📝 *Помоги улучшить бота!*\n\n"
+        "Пожалуйста, пройди короткий опрос — это займёт 1 минуту.\n\n"
+        "🔗 *Ссылка на форму:*\n"
+        "https://forms.gle/ВАША_ССЫЛКА\n\n"
+        "После заполнения просто закрой форму и продолжай пользоваться ботом.\n\n"
+        "Спасибо за обратную связь! 🙌",
+        parse_mode="Markdown",
+        reply_markup=back_to_main()
+    )
 
 # --- Запуск бота ---
 def main():
