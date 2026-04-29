@@ -127,7 +127,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             reply_markup=back_button()
         )
     elif data == "feedback":
-    await query.edit_message_text(
+        await query.edit_message_text(
         "📝 *Помоги улучшить бота!*\n\n"
         "Пожалуйста, пройди короткий опрос — это займёт 1 минуту.\n\n"
         "🔗 *Ссылка на форму:*\n"
