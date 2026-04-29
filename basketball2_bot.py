@@ -128,15 +128,15 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
     elif data == "feedback":
         await query.edit_message_text(
-        "📝 *Помоги улучшить бота!*\n\n"
-        "Пожалуйста, пройди короткий опрос — это займёт 1 минуту.\n\n"
-        "🔗 *Ссылка на форму:*\n"
-        "https://forms.gle/bfREMHETTa1EjuGX7\n\n"
-        "После заполнения просто закрой форму и продолжай пользоваться ботом.\n\n"
-        "Спасибо за обратную связь! 🙌",
+            "📝 *Помоги улучшить бота!*\n\n"
+            "Пожалуйста, пройди короткий опрос — это займёт 1 минуту.\n\n"
+            "🔗 *Ссылка на форму:*\n"
+            "https://forms.gle/bfREMHETTa1EjuGX7\n\n"
+            "После заполнения просто закрой форму и продолжай пользоваться ботом.\n\n"
+            "Спасибо за обратную связь! 🙌",
             parse_mode="Markdown",
             reply_markup=back_button()
-    )
+        )
 
 # --- Запуск бота ---
 def main():
