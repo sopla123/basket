@@ -135,7 +135,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "После заполнения просто закрой форму и продолжай пользоваться ботом.\n\n"
         "Спасибо за обратную связь! 🙌",
             parse_mode="Markdown",
-            reply_markup=back_to_main()
+            reply_markup=back_button()
     )
 
 # --- Запуск бота ---
